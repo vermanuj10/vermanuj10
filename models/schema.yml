@@ -1,0 +1,28 @@
+version: 2
+
+models:
+    - name: RAW_CUSTOMERS
+      description: "A CUSTOMER dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+            name: first_name
+            description: "The customer first name"
+            tests:
+                - not_null
+            name: last_name
+            description: "The customer last name"
+            tests:
+                - not_null
+
+    - name: RAW_ORDERS
+      description: "A ORDERS dbt model"
+      columns:
+          - name: d
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
