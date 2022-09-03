@@ -1,6 +1,18 @@
 version: 2
 
+sources:
+    - name: dbt_averma
+      tables:
+          - name: CUSTOMER_ORDERS
+    - name: dbt_averma
+      tables:
+          - name: RAW_CUSTOMERS
+    - name: dbt_averma
+      tables:
+          - name: RAW_ORDERS
+    
 models:
+    
     - name: RAW_CUSTOMERS
       description: "A CUSTOMER dbt model"
       columns:

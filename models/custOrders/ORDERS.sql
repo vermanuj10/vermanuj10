@@ -8,7 +8,7 @@ with orders as (
         order_date,
         status
 
-    from RAW_ORDERS
+    from {{ source('dbt_averma','RAW_ORDERS') }}
 
 )
 
