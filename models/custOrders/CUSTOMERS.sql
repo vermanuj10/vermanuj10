@@ -1,12 +1,10 @@
 {{ config(materialized='table') }}
-      (
-with customers as (
+with CUSTOMERS as (
     select
         ID as custid,
         first_name,
         last_name
-    from RAW_CUSTOMERS
+    from {{ source('dbt_averma','RAW_CUSTOMERS') }}
     )
 
-select * from customers 
-limit 500
+select * from CUSTOMERS;
