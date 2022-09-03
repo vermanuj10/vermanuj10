@@ -3,9 +3,6 @@ version: 2
 sources:
     - name: dbt_averma
       tables:
-          - name: CUSTOMER_ORDERS
-    - name: dbt_averma
-      tables:
           - name: RAW_CUSTOMERS
     - name: dbt_averma
       tables:
@@ -16,7 +13,7 @@ models:
     - name: RAW_CUSTOMERS
       description: "A CUSTOMER dbt model"
       columns:
-          - name: id
+          - name: ID
             description: "The primary key for this table"
             tests:
                 - unique
@@ -33,12 +30,12 @@ models:
     - name: RAW_ORDERS
       description: "A ORDERS dbt model"
       columns:
-          - name: id
+          - name: order_id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
-            name: user_id
+            name: cust_id
             description: "customer id"
             tests:
                 - not_null
@@ -48,5 +45,34 @@ models:
                 - not_null
             name: status
             description: "The current status of this order"
+            tests:
+                - not_null
+
+    - name: CUSTORDERS
+      description: "A CUST_ORDERS dbt model"
+      columns:
+          - name: Customer_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+            name: First_Name
+            description: "First name"
+            tests:
+                - not_null
+            name: Last_Name
+            description: "last name"
+            tests:
+                - not_null
+            name: First_Order_date
+            description: "first order date"
+            tests:
+                - not_null
+            name: MOST_RECENT_ORDER_DATE
+            description: "recent order date"
+            tests:
+                - not_null
+            name: NUMBER_OF_ORDERS
+            description: "number of orders"
             tests:
                 - not_null
