@@ -1,4 +1,4 @@
-{{ config(materialized="view", schema="dbt_averma") }}
+{{ config(materialized="view") }}
 with custOrders as (
         select
           
