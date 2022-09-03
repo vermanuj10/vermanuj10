@@ -5,7 +5,7 @@ with customers as (
         ID as custid,
         first_name,
         last_name
-    from DBT_AVERMA.RAW_CUSTOMERS
+    from RAW_CUSTOMERS
     )
 
 select * from customers 
