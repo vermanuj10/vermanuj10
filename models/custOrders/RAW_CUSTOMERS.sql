@@ -10,5 +10,3 @@ with customers as (
 
 select * from customers 
 limit 500
-
-
