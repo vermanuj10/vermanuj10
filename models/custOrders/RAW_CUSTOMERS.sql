@@ -1,4 +1,4 @@
-create or replace transient table DBT_SNOWFLAKE.dbt_averma.RAW_CUSTOMERS  as
+{{ config(materialized='table') }}
       (
 with customers as (
     select
