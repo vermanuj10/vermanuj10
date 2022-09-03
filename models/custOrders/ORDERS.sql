@@ -1,10 +1,11 @@
 {{ config(materialized='table') }}
 
-with orders as (
+with ord as (
 
     select
-        id as order_id,
-        user_id as customer_id,
+        
+        cust_id,
+        order_id,
         order_date,
         status
 
@@ -12,4 +13,4 @@ with orders as (
 
 )
 
-select * from orders
+select * from ord

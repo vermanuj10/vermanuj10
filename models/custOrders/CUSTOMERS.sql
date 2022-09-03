@@ -1,5 +1,5 @@
 {{ config(materialized='table') }}
-with CUSTOMERS as (
+with CUST as (
     select
         ID as custid,
         first_name,
@@ -7,4 +7,4 @@ with CUSTOMERS as (
     from {{ source('dbt_averma','RAW_CUSTOMERS') }}
     )
 
-select * from CUSTOMERS;
+select * from CUST;

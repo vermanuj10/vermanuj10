@@ -35,4 +35,4 @@ models:
   myCustOrders:
     # Applies to all files under models/custOrders/
     custOrders:
-      materialized: table
+      +materialized: view
