@@ -1,4 +1,4 @@
-{{ config(materialized="view", schema='DBT_SNOWFLAKE.dbt_averma')}}
+{{ config(materialized="view", schema='dbt_averma')}}
 with custOrders as (
         select
           
