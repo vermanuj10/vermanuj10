@@ -7,4 +7,4 @@ with CUST as (
     from {{ source('dbt_averma','RAW_CUSTOMERS') }}
     )
 
-select * from CUST;
+select * from CUST
