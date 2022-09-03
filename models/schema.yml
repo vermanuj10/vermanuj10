@@ -21,8 +21,20 @@ models:
     - name: RAW_ORDERS
       description: "A ORDERS dbt model"
       columns:
-          - name: d
+          - name: id
             description: "The primary key for this table"
             tests:
                 - unique
+                - not_null
+            name: user_id
+            description: "customer id"
+            tests:
+                - not_null
+            name: order_date
+            description: "order date when this order was placed"
+            tests:
+                - not_null
+            name: status
+            description: "The current status of this order"
+            tests:
                 - not_null

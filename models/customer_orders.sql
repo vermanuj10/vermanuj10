@@ -5,7 +5,7 @@ with custOrders as (
         user_id as custId,
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
-        count(D) as number_of_orders
+        count(ID) as number_of_orders
         
     from {{ref('RAW_ORDERS')}} group by 1
 ),
